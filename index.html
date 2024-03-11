@@ -1,0 +1,408 @@
+<!DOCTYPE html lang="en">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Real Acoustic Fields: An Audio-Visual Room Acoustics Dataset and Benchmark">
+  <meta name="keywords" content="Real Acoustic Fields, Audio-Visual Dataset, Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real Acoustic Fields: An Audio-Visual Room Acoustics Dataset and Benchmark</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/sound-waves.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Real Acoustic Fields: An Audio-Visual Room Acoustics Dataset and Benchmark</h1>
+          <h2 class="title is-4 publication-title">CVPR 2024</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ificl.github.io/" target="_blank">Ziyang Chen</a><sup>1,2*</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=5RFgT84AAAAJ&hl=en" target="_blank">Israel D. Gebru</a><sup>2</sup>,
+            </span>
+            
+            <span class="author-block">
+              <a href="https://richardt.name" target="_blank">Christian Richardt</a><sup>2</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://anuragkr90.github.io/" target="_blank">Anurag Kumar</a><sup>3</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/wlaney/" target="_blank">William Laney</a><sup>2</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://andrewowens.com" target="_blank">Andrew Owens</a><sup>1</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://alexanderrichard.github.io/" target="_blank">Alexander Richard</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> University of Michigan</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup> Codec Avatars Lab, Pittsburgh PA, Meta</span><br>
+            <span class="author-block"><sup>3</sup> Reality Labs Research, Meta</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">(* Work done during an internship at Meta)</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="static/docs/real-acoustic-fields.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=" " class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/facebookresearch/real-acoustic-fields/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+              <!-- Bibtex. -->
+              <span class="link-block">
+                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-book"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEASER + INTRO -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="is-centered is-max-desktop teaser">
+        <center>
+          <img src="static/images/RAF.jpg" width="800px" style="margin-bottom: 10px; border-radius: 15px;"></img>
+        </center>
+      </div>
+      <!-- <br> -->
+      <h2 class="subtitle has-text-centered">
+        Real Acoustic Fields dataset captures high-quality and dense room impulse response data paired with multi-view images with our "Earful Tower" microphone rig and "Eyeful Tower" camera rig.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container" style="text-align:center">
+      <h2 class="title is-3"><img src="./static/images/musical-note-1.png" alt="" style="width: 24px; margin-right: 13px;">Demo Videos<img src="./static/images/musical-note-2.png" alt="" style="width: 24px; margin-left: 10px;"></h2>
+      <p style="margin-bottom: 10px;">
+        <strong>Please note:</strong> <strong>unmute</strong> the audio and listen with <b>headphones</b> for best experience.
+      </p>
+      <center>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-furnished1">
+            <video poster="" id="furnished1" autoplay controls muted playsinline>
+              <source src="./static/videos/furnished_hrtf-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-unfurnished1">
+            <video poster="" id="unfurnished1" autoplay controls muted playsinline>
+              <source src="./static/videos/unfurnished_hrtf-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-furnished2">
+            <video poster="" id="furnished2" autoplay controls muted playsinline>
+              <source src="./static/videos/furnished_hrtf-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-unfurnished2">
+            <video poster="" id="unfurnished2" autoplay controls muted playsinline>
+              <source src="./static/videos/unfurnished_hrtf-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          </div>
+        </div>
+      </center>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+
+          <p>
+            We present a new dataset called <strong>Real Acoustic Fields (RAF)</strong> that captures real acoustic room data from multiple
+            modalities. The dataset includes high-quality and densely captured room impulse response data paired with multi-view
+            images, and precise 6DoF pose tracking data for sound emitters and listeners in the rooms. We used this dataset to
+            evaluate existing methods for novel-view acoustic synthesis and impulse response generation which previously relied on
+            synthetic data. In our evaluation, we thoroughly assessed existing audio and audio-visual models against multiple
+            criteria and proposed settings to enhance their performance on real-world data. We also conducted experiments to
+            investigate the impact of incorporating visual data (i.e., images and depth) into neural acoustic field models.
+            Additionally, we demonstrated the effectiveness of a simple sim2real approach, where a model is pre-trained with
+            simulated data and fine-tuned with sparse real-world data, resulting in significant improvements in the few-shot
+            learning approach. RAF is the first dataset to provide densely captured room acoustic data, making it an ideal
+            resource for researchers working on audio and audio-visual neural acoustic field modeling techniques.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Data capture -->
+<section class="section" style="margin-top: -30px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="capture">Data Capture</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our data collection pipeline involves separate (a) audio and (b) visual capturing to ensure clean signals, with camera and RIR
+            data aligned to the same coordinate system.
+          </p>
+
+          <h2 class="title is-4" style="margin-top: 0px; margin-bottom: 20px;">Audio Capturing</h2>
+          <p>
+            We capture audio data using our novel <strong>"Earful Tower"</strong> microphone tower equipped with 36 omnidirectional microphones and the customized height-adjustable loudspeaker. Impulse responses and real speech recordings are densely captured by moving to various walkable positions in the room.
+          </p>
+          <center>
+            <img src="./static/images/audio_capture.jpg" class="center-img" width="660px" />
+          </center>
+          <br>
+          <h2 class="title is-4" style="margin-top: 0px; margin-bottom: 20px;">Visual Capturing</h2>
+          <p>
+              To achieve high-fidelity visual reconstruction and synthesize appearance from any viewpoint, we adopt the <a href="https://vr-nerf.github.io/" target="_blank">VR-NeRF</a> method, employing the multi-camera rig, <strong>"Eyeful
+              Tower"</strong>. The rig is moved across the floor area for dense capture of static scenes.
+          </p>
+          <center>
+            <img src="./static/images/visual_capture.jpg" class="center-img" width="560px" />
+          </center>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Benchmark -->
+<section class="section" style="margin-top: -10px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="benchmark">Benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+            We benchmark existing acoustic field models, including <a href="https://www.andrew.cmu.edu/user/afluo/Neural_Acoustic_Fields/" target="_blank">NAF</a>, <a href="https://openreview.net/forum?id=7KBzV5IL7W" target="_blank">INRAS</a>, <a href="https://liangsusan-git.github.io/project/nacf/" target="_blank">NACF</a> and <a href="https://liangsusan-git.github.io/project/avnerf/" target="_blank">AV-NeRF</a>. We also introduce two improved baselines <strong>NAF++</strong> and <strong>INRAS++</strong>. 
+          </p>
+          <br>
+          <center>
+            <div id="chart"></div>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  var options = {
+    series: [
+      { name: 'STFT err (dB)', data: [0.64, 0.64, 0.36, 0.39, 0.39, 0.39] },
+      { name: 'C50 err (dB)', data: [0.71, 0.53, 0.79, 0.57, 0.59, 0.73] },
+      { name: 'EDT err (0.1 sec)', data: [0.21, 0.17, 0.25, 0.17, 0.17, 0.21] },
+      { name: 'T60 err (10%)', data: [1.008, 0.819, 0.801, 0.617, 0.662, 0.811] },
+
+    ],
+    chart: {
+      type: 'bar',
+      height: 350,
+      stacked: true,
+      toolbar: {
+        show: true
+      },
+      zoom: {
+        enabled: true
+      }
+    },
+    responsive: [{
+      breakpoint: 480,
+      options: {
+        legend: {
+          position: 'bottom',
+          offsetX: -10,
+          offsetY: 0
+        }
+      }
+    }],
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        borderRadius: 8,
+        dataLabels: {
+          total: {
+            enabled: false,
+            style: {
+              fontSize: '13px',
+              fontWeight: 900
+            }
+          }
+        }
+      },
+    },
+    xaxis: {
+      type: 'model',
+      categories: ['NAF', 'NAF++', 'INRAS', 'INRAS++', 'NACF', 'AV-NeRF'],
+      labels: {
+        style: {
+          fontSize: '16px',  // Adjust the font size as needed
+        },
+      },
+    },
+    legend: {
+      position: 'top',
+      offsetY: 0,
+      fontSize: '14px', // Adjust the font size as needed
+    },
+    fill: {
+      opacity: 1
+    }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+</script>
+
+
+<!-- Fewshot -->
+<section class="section" style="margin-top: -30px;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered" id="benchmark">Sim2real for Few-Shot RIR Synthesis</h2>
+        <div class="content has-text-justified">
+          <p>
+            We also propose a sim2real approach that significantly improve few-shot RIR synthesis by pretraining neural fields on dense synthetic data and funetuning on sparse real-world samples. 
+          </p>
+          <center>
+            <img src="./static/images/sim2real.jpg" class="center-img" width="600px" />
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{chen2024RAF,
+      author    = { Chen, Ziyang and 
+                    Gebru, Israel D. and 
+                    Richardt, Christian and 
+                    Kumar, Anurag and
+                    Laney, William and
+                    Owens, Andrew and 
+                    Richard, Alexander},
+      title     = {Real Acoustic Fields: An Audio-Visual Room Acoustics Dataset and Benchmark},
+      journal   = {The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)},
+      year      = {2024},
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a> for open sourcing this website template. 
+            <br>
+            Icons are borrowed from <a href="https://www.flaticon.com/free-icons/">Flaticon</a>.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
