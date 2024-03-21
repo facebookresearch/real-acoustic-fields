@@ -16,7 +16,7 @@ We present the Real Acoustic Fields (RAF) dataset that captures real acoustic ro
 The [Real Acoustic Fields dataset]() is hosted on AWS S3.
 We recommend using the AWS command line interface (AWS CLI), see [AWS CLI installation instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
-### 🔽 Download RIR Data
+### 🔽 Download Room Impulse Respose (RIR) Data
 Step 1. Increase the number of concurrent requests from 10 to 100 to download smaller files faster.
 ```
 $ aws configure set default.s3.max_concurrent_requests 100
@@ -40,7 +40,7 @@ Step 5. Clean up
 ```
 $ rm  raf_*room.z??
 ```
-### 🔽 Download Images and Cameras Data
+### 🔽 Download Visual data
 ```
 TBA
 ```
