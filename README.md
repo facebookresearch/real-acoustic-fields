@@ -12,10 +12,11 @@ We present the Real Acoustic Fields (RAF) dataset that captures real acoustic ro
 
 
 
-## Dataset
+# Dataset
 The [Real Acoustic Fields dataset]() is hosted on AWS S3.
 We recommend using the AWS command line interface (AWS CLI), see [AWS CLI installation instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
+## RIR
 The RIR data is organized as follows:
 ```
     ├───data
@@ -63,10 +64,16 @@ Step 5. Clean up
 ```
 $ rm  raf_*room.z??
 ```
+## Visual Data
+TBA
 ### 🔽 Download Visual data
 ```
 TBA
 ```
+## 3D Models (MESH)
+You can download obj files of the rooms here: 
+<a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/3d_models/EmptyRoom/index.html"> Empty Room</a> and 
+<a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/3d_models/FurnishedRoom/index.html">Furnished Room</a>
 
 ## Citation
 If you find this repository and dataset useful in your research, please consider giving a star ⭐ and cite our CVPR 2024 paper by using the following BibTeX entrys.
