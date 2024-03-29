@@ -70,7 +70,7 @@ TBA
 ```
 TBA
 ```
-## 3D Models (MESH)
+## 3D Models (Reconstructed 3D Mesh)
 Textured mesh in OBJ format, exported from Metashape and created from the full-resolution JPEG images.
 World coordinate system: X: front, Y-Up, Z-left.  y=0 is ground plane, units are in meters.
 
