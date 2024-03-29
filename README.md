@@ -16,7 +16,28 @@ We present the Real Acoustic Fields (RAF) dataset that captures real acoustic ro
 The [Real Acoustic Fields dataset]() is hosted on AWS S3.
 We recommend using the AWS command line interface (AWS CLI), see [AWS CLI installation instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
+The RIR data is organized as follows:
+```
+    ├───data
+    │   ├───000000
+    │          rir.wav
+    │          rx_pos.txt
+    │          tx_pos.txt
+    │   ├───000001
+    :   :
+    ├───metadata
+    │      all_rx_pos.txt
+    │      all_tx_pos.txt
+```
+The rx_pos.txt file contains the receiver's 3D location (xyz) in the room. As we used omni-directional microphones, the orientation isn't required.
+
+The tx_pos.txt file contains the transmitter's (loudspeaker's) 3D location (xyz) and 3D orientation in the room. The orientation is given in quaternions, using the real-part last format: xyzW.
+
+The metadata subfolder consolidates all the receiver and transmitter data in a single CSV file. Each row in this file corresponds to a subfolder in the data section. For instance, the first row corresponds to the folder data\000000, while row 4568 corresponds to the folder data\004568.
+
 ### 🔽 Download Room Impulse Respose (RIR) Data
+<a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/rir/archived/index.html"> Preview link </a>
+
 Step 1. Increase the number of concurrent requests from 10 to 100 to download smaller files faster.
 ```
 $ aws configure set default.s3.max_concurrent_requests 100
