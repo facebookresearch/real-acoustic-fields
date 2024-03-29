@@ -31,7 +31,7 @@ The RIR data is organized as follows:
 ```
 The rx_pos.txt file contains the receiver's 3D location (xyz) in the room. As we used omni-directional microphones, the orientation isn't required.
 
-The tx_pos.txt file contains the transmitter's (loudspeaker's) 3D location (xyz) and 3D orientation in the room. The orientation is given in quaternions, using the real-part last format: xyzW.
+The tx_pos.txt file contains the transmitter's (loudspeaker's) 3D orientation and 3D location (xyz) in the room. The orientation is given in quaternions, using the real-part last format: xyzW. The first four values in the file represent the loudspeaker's orientation, while the last three values indicate its 3D location.
 
 The metadata subfolder consolidates all the receiver and transmitter data in a single CSV file. Each row in this file corresponds to a subfolder in the data section. For instance, the first row corresponds to the folder data\000000, while row 4568 corresponds to the folder data\004568.
 
