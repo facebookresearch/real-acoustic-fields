@@ -35,7 +35,7 @@ The tx_pos.txt file contains the transmitter's (loudspeaker's) 3D orientation an
 
 The metadata subfolder consolidates all the receiver and transmitter data into two CSV files. Each row in these files corresponds to a subfolder in the data section. For instance, the first row corresponds to the folder data\000000, while row 4568 corresponds to the folder data\004568.
 
-The all the 3D positions are in meters. 
+All the 3D positions are in meters. 
 
 ### 🔽 Download Room Impulse Respose (RIR) Data
 <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/rir/archived/index.html"> Preview link </a>
