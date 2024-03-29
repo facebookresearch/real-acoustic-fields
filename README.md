@@ -4,7 +4,7 @@
 <div align = "center"><img src="media/RAF.jpg" style="border-radius: 15px;" /></div>
 <p align="center" style="margin: 2em auto;">
     <a href='https://facebookresearch.github.io/real-acoustic-fields/' style='padding-left: 0.5rem;'><img src='https://img.shields.io/badge/Real--Acoustic--Fields-Project_page-orange?style=flat&logo=github&logoColor=orange' alt='Project Page'></a>
-    <a href=''><img src='https://img.shields.io/badge/arXiv-Paper_PDF-red?style=flat&logo=arXiv&logoColor=green' alt='Paper PDF'></a>
+    <a href='https://arxiv.org/pdf/2403.18821.pdf'><img src='https://img.shields.io/badge/arXiv-Paper_PDF-red?style=flat&logo=arXiv&logoColor=green' alt='Paper PDF'></a>
   </p>
 <!-- <p align="left" style="font-size:20px; font-weight:600;">CVPR 2024</p> -->
 
