@@ -67,7 +67,7 @@ $ rm  raf_*room.z??
 ## Visual Data
 We have realsed the visual data from <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_emptyroom/index.html">"Emptyroom"</a> and <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_furnishedroom/index.html">"Furnishedroom"</a> as part of another dataset release. Please refer to the <a href="https://github.com/facebookresearch/EyefulTower">Eyeful dataset</a> for more details.
 
-<a href="https://github.com/facebookresearch/EyefulTower?tab=readme-ov-file#data-organization"> Visual Data Orginzation</a>
+<a href="https://github.com/facebookresearch/EyefulTower?tab=readme-ov-file#data-organization"> Visual Data Organization</a>
 
 <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_furnishedroom/index.html"> Visual Data Download Instructions</a>
 
