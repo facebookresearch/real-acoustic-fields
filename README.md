@@ -65,11 +65,12 @@ Step 5. Clean up
 $ rm  raf_*room.z??
 ```
 ## Visual Data
-TBA
-### 🔽 Download Visual data
-```
-TBA
-```
+We have realsed the visual data from <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_emptyroom/index.html">"Emptyroom"</a> and <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_furnishedroom/index.html">"Furnishedroom"</a> as part of another dataset release. Please refer to the <a href="https://github.com/facebookresearch/EyefulTower">Eyeful dataset</a> for more details.
+
+<a href="https://github.com/facebookresearch/EyefulTower?tab=readme-ov-file#data-organization"> Visual Data Orginzation</a>
+
+<a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_furnishedroom/index.html"> Visual Data Download Instructions</a>
+
 ## 3D Models (Reconstructed 3D Mesh)
 Textured mesh in OBJ format, exported from Metashape and created from the full-resolution JPEG images.
 World coordinate system: X: front, Y-Up, Z-left.  y=0 is ground plane, units are in meters.
