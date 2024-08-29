@@ -10,6 +10,9 @@
 
 We present the Real Acoustic Fields (RAF) dataset that captures real acoustic room data from multiple modalities. The dataset includes high-quality and densely captured room impulse response data paired with multi-view images, and precise 6DoF pose tracking data for sound emitters and listeners in the rooms.
 
+# Updates
+- 2024/08/29: Uploaded details of the data split we used for experiments reported in the paper.
+- 2024/08/29: The visual data is now integrated in <a href="https://docs.nerf.studio/quickstart/existing_dataset.html"> nerfstudio </a>
 
 
 # Dataset
@@ -65,7 +68,7 @@ Step 5. Clean up
 $ rm  raf_*room.z??
 ```
 ## Visual Data
-We have realsed the visual data from <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_emptyroom/index.html">"Emptyroom"</a> and <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_furnishedroom/index.html">"Furnishedroom"</a> as part of another dataset release. Please refer to the <a href="https://github.com/facebookresearch/EyefulTower">Eyeful dataset</a> for more details.
+We have released the visual data from <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_emptyroom/index.html">"Emptyroom"</a> and <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/EyefulTower/raf_furnishedroom/index.html">"Furnishedroom"</a> as part of another dataset release. Please refer to the <a href="https://github.com/facebookresearch/EyefulTower">Eyeful dataset</a> for more details.
 
 <a href="https://github.com/facebookresearch/EyefulTower?tab=readme-ov-file#data-organization"> Visual Data Organization</a>
 
@@ -75,8 +78,8 @@ We have realsed the visual data from <a href="https://fb-baas-f32eacb9-8abb-11eb
 Textured mesh in OBJ format, exported from Metashape and created from the full-resolution JPEG images.
 World coordinate system: X: front, Y-Up, Z-left.  y=0 is ground plane, units are in meters.
 
-You can download obj files of the rooms here: 
-<a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/3d_models/EmptyRoom/index.html"> Empty Room</a> and 
+You can download obj files of the rooms here:
+<a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/3d_models/EmptyRoom/index.html"> Empty Room</a> and
 <a href="https://fb-baas-f32eacb9-8abb-11eb-b2b8-4857dd089e15.s3.amazonaws.com/real_acoustic_fields/3d_models/FurnishedRoom/index.html">Furnished Room</a>
 
 ## Citation
@@ -95,6 +98,7 @@ If you find this repository and dataset useful in your research, please consider
       year      = {2024},
     }
 ```
+
 
 ## License
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>, as found in the LICENSE file.
